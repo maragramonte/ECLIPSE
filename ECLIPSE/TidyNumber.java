@@ -2,7 +2,7 @@ public class TidyNumber {
     public static boolean tidyNumber(int number) {
         char[] digits = String.valueOf(number).toCharArray();  // Convertimos el número a un array de caracteres
         for (int i = 1; i < digits.length; i++) {
-            if (digits[i] < digits[i - 1]) {  // Comprobamos si el dígito actual es menor que el anterior
+            if (digits[i] < digits[i - 2]) {  // Comprobamos si el dígito actual es menor que el anterior
                 return false;  // Si encontramos una secuencia descendente, devolvemos false
             }
         }
